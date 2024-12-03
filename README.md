@@ -1,18 +1,31 @@
 # AI ML Project-Euphoria Dataset 
 ## Team Members:
 
--Defne Turcan 297411
+- Defne Turcan 297411
 
--Deniz Yakici 304391
+- Deniz Yakici 304391
 
--Mete Alper Yegengil 
+- Mete Alper Yegengil 304021
 
 # Introduction
-The aim of our project is to determine the performance of three machine learning models, Linear Regression, Random Forest, and Decision Tree, in predicting the **Happiness Index** using a dataset indicators. With this project we aimed to evaluate and find the best model for this task by analyzing the predictive accuracy of the models using metrics such as Mean Squared Error (MSE) and R² (coefficient of determination). The key objective of our project is to conclude a preprocessing, conducting Exploratory Data Analysis (EDA), and eventually do a model comparison to find the best model that would result in optimum performance for the prediction of happiness, considering accuracy, robustness, and generalization.
+The aim of our project is to determine the performance of three machine learning models in predicting the **Happiness Index** using a dataset indicators. With this project we aimed to evaluate and find the best model for this task by analyzing the predictive accuracy of the models using metrics such as Mean Squared Error (MSE) and R² (coefficient of determination). The key objective of our project is to conclude a preprocessing, conducting Exploratory Data Analysis (EDA), and eventually do a model comparison to find the best model that would result in optimum performance for the prediction of happiness, considering accuracy, robustness, and generalization.
 
 # Methods
 
-## Design Choices
+# Design Choices
+
+We chose 3 machine learning models:
+
+1. Linear Regression
+2. Decision Tree
+3. Random Forest
+
+For an overview of our data splitting,  we split the dataset into %80 training and %20 testing. The training set was used to fit the models, while the testing set was reserved for evaluating model performance on unseen data.
+
+Another design choice we chose was to use cross-validation to evaluate the performance. By this method, we reduced the risk of overfitting to a single split and provided a more reliable estimate of model performance.
+
+Lastly, we used hyperparameter tuning to optimize the parameters and used GridSearchCV to explore combinations of different hyperparameters. 
+
 
 
 ## Describing the Dataset 
@@ -28,11 +41,16 @@ The target variable of our dataset is **happiness_index**
 
 ## Python Environment 
 In our project design we used multiple libraries:
--pandas
--numpy
--matplotlib
--seaborn
--scikit-learn (used for implementing machine learning models)
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn (used for implementing machine learning models)
+
+## Recreating the Environment
+It is said to be helpful to use this command prompt to recreate the environment.
+
+conda env export > environment.yml
 
 
 # Workflow
@@ -69,7 +87,7 @@ The following hyperparameters were tuned for the Random Forest model:
 We concluded hyperparameter tuning for Random Forest and Decision Tree Models by using cross-validation. The reason why we used cross-validation is to ensure generalizability of the models' performance, optimize hyperparameters, and decrease the risks of overfitting and underfitting.
 
 ### Model Evaluation
-After running our code and trying it on the test set. We evaluated the model performance by using MSE and R². Eventually, we compared all of the results and we chose the best model.
+The evaluation of model performance was conducted using two key metrics: Mean Squared Error (MSE) and R² (coefficient of determination). For MSE, lower values indicated a better performance. R², on the other hand, with values ranging from 0 to 1 (or negative if the model performs worse than a baseline), a higher R² value indicated a better fit to the data.
 
 
 ## Model Choices and Baseline(s)
@@ -114,19 +132,19 @@ As a result, we can deduce that Random Forest Model is the best model out of all
 # Conclusion
 
 ## Key Take Aways
-In this project, the performances of Linear Regression, Decision Tree, and Random Forest are compared for the prediction of the Happiness Index based on the socio-economic indicators. Indeed, by the results presented, the best model for the data at hand, giving the least MSE and with the best R² score, indicating capability of capture of non-linear relationships of variable interactions and robust to generalized to new data. Decision Tree, with the use of depth control in order to avoid overfitting, showed a moderate performance. The baseline model, Linear Regression, had the worst performance since it failed to model the non-linear relationships of the features in the data. This project also emphasizes the usage of ensemble methods such as Random Forest when it comes to datasets containing complex interactions between features.
+In this project, the performances of Linear Regression, Decision Tree, and Random Forest are compared for the prediction of the Happiness Index based on the socio-economic indicators. By the results presented, the best model for the data, giving the least MSE and with the best R² score, indicating capability of capture of non-linear relationships of variable interactions and robust to generalized to new data. Decision Tree, with the use of depth control in order to avoid overfitting, showed a moderate performance. The baseline model, Linear Regression, had the worst performance since it failed to model the non-linear relationships of the features in the data. Our winner model handling our dataset was Random Forest, as it performed the best and has a great capability to handle complex nonlinear datasets.
 
 ## Unanswered Questions and Future Work
-Despite the promising results, some questions remain unanswered. The project did not consider other advanced ensemble methods such as Gradient Boosting or XGBoost, which can provide even better predictive performance. Again, feature engineering consisted of scaling and cleaning; domain knowledge-based transformations or additional features may prove helpful toward model accuracy. Lastly, the given dataset is assumed to be complete and representative, but the analysis could be validated by larger and more diverse datasets in order to guarantee applicability.
+Despite the results, we had some questions remain unanswered. Our project did not consider other advanced ensemble methods such as Gradient Boosting, which can provide even better predictive performance. Again, feature engineering consisted of scaling and cleaning; domain knowledge-based transformations or additional features may prove helpful toward model accuracy. Lastly, our dataset is assumed to be complete and representative, but the analysis could be validated by larger and more diverse datasets in order to guarantee applicability.
 
-Some possible directions for future work:
+Here are some possible directions for future work:
 
-1. **Hyperparameter Optimization**: Extend tuning to include additional hyperparameters and advanced techniques like Bayesian optimization. 
+1. **Hyperparameter Optimization**: We might extend tuning to include additional hyperparameters and advanced techniques like Bayesian optimization. 
 
-2. **Feature Engineering**: Introduce new features, interaction terms, or feature selection techniques to improve model insights and accuracy. 
+2. **Feature Engineering**: We can introduce new features, interaction terms, or feature selection techniques to improve model insights and accuracy. 
 
-3. **Alternative Models**: Evaluate Gradient Boosting, XGBoost, or neural networks to compare against Random Forest.
-4. **Explainability**: Employ techniques such as SHAP or LIME to better understand model predictions and which features are most influential.
+3. **Alternative Models**: We can evaluate Gradient Boosting, or neural networks to compare against Random Forest.
+   
 
 
 
