@@ -68,7 +68,13 @@ The purpose of the experiments was to identify the learning method (regression, 
 To implement the machine learning models, we needed our data to be cleaned and appropriate for handling. We cleaned the data by getting rid of missing values, and we encoded categorical variables. Then, most importantly, we did feature scaling by using StandardScaler for Linear Regression since we needed our dataset values to be in the same range. Lastly, we did the train-test data split to evaluate models' performance and assure that our model is not affected by biased trained data.
 
 ### EDA
-We preferred to do Correlation Heatmap and Distribution Analysis to better understand our dataset and the relationships between our variables. By doing EDA, we analyzed the distribution of features, their ranges, and scales. Then, we looked into the distribution of our happiness_index to make sure it is aligned with the assumptions of the models we used. Lastlyü we identified correlations and patterns among features to understand how they behave within. 
+We preferred to do Correlation Heatmap and Distribution Analysis to better understand our dataset and the relationships between our variables. By doing EDA, we analyzed the distribution of features, their ranges, and scales. Then, we looked into the distribution of our happiness_index to make sure it is aligned with the assumptions of the models we used. Lastly, we identified correlations and patterns among features to understand how they behave within. 
+
+![image](https://github.com/user-attachments/assets/bb15bbb3-6574-42d1-8d44-0409108a310a)
+
+![image](https://github.com/user-attachments/assets/8714cb8d-9883-4762-af7f-609812a2a6c1)
+
+
 
 ### Hyperparameter Tuning
 Hyperparameter Tuning: Explanation
