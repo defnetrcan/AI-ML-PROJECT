@@ -22,7 +22,7 @@ We chose 3 machine learning models:
 
 For an overview of our data splitting,  we split the dataset into %80 training and %20 testing. The training set was used to fit the models, while the testing set was reserved for evaluating model performance on unseen data.
 
-Another design choice we chose was to use cross-validation to evaluate the performance. By this method, we reduced the risk of overfitting to a single split and provided a more reliable estimate of model performance.
+Another design choice we chose was to use cross-validation to evaluate the performance. By this method, we reduced the risk of overfitting to a single split and provided a more reliable estimate of model performance. We chose k in the k-fold cross validation as 3. In this case it is represented as cv=3
 
 Lastly, we used hyperparameter tuning to optimize the parameters and used GridSearchCV to explore combinations of different hyperparameters. 
 
