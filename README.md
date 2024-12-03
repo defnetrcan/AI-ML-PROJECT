@@ -69,17 +69,17 @@ As of requirements, in this project we selected three models specifically used f
 
 - **Linear Regression**
   Linear Regression served as a simple baseline for comparison since it is simple and very interpretable. It directly assumed a linear relationship between the feature variables and our target variable which made it more convenient to use as a baseline for comparison with the other two models.
-  ### Method
+  ###### Method
   We trained a Linear Regression model on the training set, and evaluated the model using Mean Squared Error (MSE) and R² metrics on the validation and test datasets.
   
 - **Random Forests**
  Random Forest is chosen to handle also the nonlinear relationships and outliers, and lastly, we chose decision trees to offer us more interpretability and a quicker evaluation.
- ### Method
+ ##### Method
  We trained a Random Forest model on the dataset, and used GridSearchCV to tune hyperparameters like n_estimators (number of trees), max_depth, and min_samples_split.
 
 - **Decision Trees**
   Decision Trees with is capability to capture some feature splits handled non-linearity. It has computationally low cost, requires minimal data preperation, allows flexibility.
-  ### Method
+  ##### Method
   We trained Decision Tree models with varying max_depth to find the balance between overfitting and underfitting.
   
 
