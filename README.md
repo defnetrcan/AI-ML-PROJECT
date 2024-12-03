@@ -38,7 +38,7 @@ The features of our dataset are:
 - Generosity
 - Perception of corruption
   
-The target variable of our dataset is **happiness_index**
+The target variable of our dataset is **happiness_index**.
 
 ## Python Environment 
 In our project design we used multiple libraries:
