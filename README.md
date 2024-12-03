@@ -37,6 +37,7 @@ The features of our dataset are:
 - Freedom to make life choices
 - Generosity
 - Perception of corruption
+  
 The target variable of our dataset is **happiness_index**
 
 ## Python Environment 
