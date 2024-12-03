@@ -36,12 +36,12 @@ In our project design we used multiple libraries:
 
 
 # Workflow
--Data Processing
--Explanatory Data Analysis
--Model Training
--Hyperparameter Tuning
--Model Evaluation
--Result Interpretation
+1. Data Processing
+2. Explanatory Data Analysis
+3. Model Training
+4. Hyperparameter Tuning
+5. Model Evaluation
+6. Result Interpretation
 
 # Experimental Design
 The purpose of the experiments was to identify the learning method (regression, classification, clustering, etc.) and testing 3 models to compare the performance of these machine learning models to predict **happiness_index** based on the features of our dataset that are mainly socio-economic factors. Our main objective was to use relevant metrics and conducting necessary implementations to evaluate each of our models' ability to gather relationships between the variables in the dataset and our target variable as minimizing errors and maximizing the prediction accuracy. 
@@ -53,7 +53,18 @@ To implement the machine learning models, we needed our data to be cleaned and a
 We preferred to do Correlation Heatmap and Distribution Analysis to better understand our dataset and the relationships between our variables. By doing EDA, we analyzed the distribution of features, their ranges, and scales. Then, we looked into the distribution of our happiness_index to make sure it is aligned with the assumptions of the models we used. Lastlyü we identified correlations and patterns among features to understand how they behave within. 
 
 ### Hyperparameter Tuning
+Hyperparameter Tuning: Explanation
 
+The hyperparameter tuning for the **Random Forest** and **Decision Tree** models was conducted to further improve their performance through optimization. This step was essential as it helped in balancing the overfitting-underfitting. 
+
+The following hyperparameters were tuned for the Random Forest model:
+
+- **`n_estimators`**: This is the number of trees in the forest, and the values being tested were `[50, 100, 150, 200]`
+- **`max_depth`**: The value for `max_depth` limited how deep each tree will be, and this is a technique for model complexity control against overfitting, with values to be tested of `[5, 10, 15, 20, None]`
+- **`min_samples_split`**: The minimum number of samples required to split an internal node, and it will be tested for `[2, 5, 10]`
+- **`min_samples_leaf`**: Minimum number of samples required to be at a leaf node, taken from `[1, 2, 4]`, also to avoid too deep trees.
+- In the case of the Decision Tree model, important hyperparameters were `max_depth` and `min_samples_split`, tested with `[5, 10, 15, 20, None]` and `[2, 5, 10]`, respectively, in order to avoid over-complexity of the tree. The grid of hyperparameter values was then tested using **GridSearchCV**, which performs a search over specified parameter values for the best-performing configuration.
+  
 ### Model Training
 We concluded hyperparameter tuning for Random Forest and Decision Tree Models by using cross-validation. The reason why we used cross-validation is to ensure generalizability of the models' performance, optimize hyperparameters, and decrease the risks of overfitting and underfitting.
 
