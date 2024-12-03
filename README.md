@@ -69,7 +69,7 @@ The following hyperparameters were tuned for the Random Forest model:
 We concluded hyperparameter tuning for Random Forest and Decision Tree Models by using cross-validation. The reason why we used cross-validation is to ensure generalizability of the models' performance, optimize hyperparameters, and decrease the risks of overfitting and underfitting.
 
 ### Model Evaluation
-After running our code and trying it on the test set. We evaluated the model performance by using MSE and R². Eventually, we compared all od the results and we chose the best model.
+After running our code and trying it on the test set. We evaluated the model performance by using MSE and R². Eventually, we compared all of the results and we chose the best model.
 
 
 ## Model Choices and Baseline(s)
