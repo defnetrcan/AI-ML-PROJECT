@@ -1,9 +1,9 @@
 # AI ML Project-Euphoria Dataset 
 ## Team Members:
 
--Defne Turcan
+-Defne Turcan 297411
 
--Deniz Yakici
+-Deniz Yakici 304391
 
 -Mete Alper Yegengil 
 
@@ -44,9 +44,12 @@ In our project design we used multiple libraries:
 -Data Processing
 -Explanatory Data Analysis
 -Model Training
+-Hyperparameter Tuning
 -Model Evaluation
+-Result Interpretation
 
-## Explanation of our Workflow
+# Experimental Design
+The purpose of the experiments was to identify the learning method (regression, classification, clustering, etc.) and testing 3 models to compare the performance of these machine learning models to predict **happiness_index** based on the features of our dataset that are mainly socio-economic factors. Our main objective was to use relevant metrics and conducting necessary implementations to evaluate each of our models' ability to gather relationships between the variables in the dataset and our target variable as minimizing errors and maximizing the prediction accuracy. 
 
 ### Data Processing
 To implement the machine learning models, we needed our data to be cleaned and appropriate for handling. We cleaned the data by getting rid of missing values, and we encoded categorical variables. Then, most importantly, we did feature scaling by using StandardScaler for Linear Regression since we needed our dataset values to be in the same range. Lastly, we did the train-test data split to evaluate models' performance and assure that our model is not affected by biased trained data.
@@ -54,15 +57,14 @@ To implement the machine learning models, we needed our data to be cleaned and a
 ### EDA
 We preferred to do Correlation Heatmap and Distribution Analysis to better understand our dataset and the relationships between our variables. By doing EDA, we analyzed the distribution of features, their ranges, and scales. Then, we looked into the distribution of our happiness_index to make sure it is aligned with the assumptions of the models we used. Lastlyü we identified correlations and patterns among features to understand how they behave within. 
 
+### Hyperparameter Tuning
 
 ### Model Training
 We concluded hyperparameter tuning for Random Forest and Decision Tree Models by using cross-validation. The reason why we used cross-validation is to ensure generalizability of the models' performance, optimize hyperparameters, and decrease the risks of overfitting and underfitting.
 
 ### Model Evaluation
-After running our code and trying it on the test set. We evaluated the model performance by using MSE and R². Eventually, we compared all od the results and by commenting and doing critical thinking we chose the best model.
+After running our code and trying it on the test set. We evaluated the model performance by using MSE and R². Eventually, we compared all od the results and we chose the best model.
 
-# Experimental Design
-The purpose of the experiments was to identify the learning method (regression, classification, clustering, etc.) and testing 3 models to compare the performance of these machine learning models to predict **happiness_index** based on the features of our dataset that are mainly socio-economic factors. Our main objective was to use relevant metrics and conducting necessary implementations to evaluate each of our models' ability to gather relationships between the variables in the dataset and our target variable as minimizing errors and maximizing the prediction accuracy. 
 
 ## Model Choices and Baseline(s)
 As of requirements, in this project we selected three models specifically used for regression. It can be seen that our task involves predicting the happiness_index by using other variables and features in our dataset. Therefore, we decided to test models that are applicable for regression.
@@ -70,23 +72,20 @@ As of requirements, in this project we selected three models specifically used f
 - **Linear Regression**
   
   Linear Regression served as a simple baseline for comparison since it is simple and very interpretable. It directly assumed a linear relationship between the feature variables and our target variable which made it more convenient to use as a baseline for comparison with the other two models.
-  
-##### Method
-We trained a Linear Regression model on the training set, and evaluated the model using Mean Squared Error (MSE) and R² metrics on the validation and test datasets.
+
+**Method**: We trained a Linear Regression model on the training set, and evaluated the model using Mean Squared Error (MSE) and R² metrics on the validation and test datasets.
   
 - **Random Forests**
   
   Random Forest is chosen to handle also the nonlinear relationships and outliers, and lastly, we chose decision trees to offer us more interpretability and a quicker evaluation.
   
-##### Method
-We trained a Random Forest model on the dataset, and used GridSearchCV to tune hyperparameters like n_estimators (number of trees), max_depth, and min_samples_split.
+**Method**: We trained a Random Forest model on the dataset, and used GridSearchCV to tune hyperparameters like n_estimators (number of trees), max_depth, and min_samples_split.
 
 - **Decision Trees**
   
   Decision Trees with is capability to capture some feature splits handled non-linearity. It has computationally low cost, requires minimal data preperation, allows flexibility.
-  
-##### Method
-We trained Decision Tree models with varying max_depth to find the balance between overfitting and underfitting.
+
+**Method**: We trained Decision Tree models with varying max_depth to find the balance between overfitting and underfitting.
   
 
 
