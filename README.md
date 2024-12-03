@@ -14,11 +14,6 @@ The aim of our project is to determine the performance of three machine learning
 
 ## Design Choices
 
-### Other Relevant Design Decisions
--Evaluation Metrics
-
--Hyperparameters
-For Random Forest Model, we used GridSearchCV to tune n_estimators, max_depth, min_samples_split. For the Decision Tree Model, we only controlled max_depth to prevent overfitting.
 
 ## Describing the Dataset 
 Our datasaet includes several so called socio-economic indicatures. 
